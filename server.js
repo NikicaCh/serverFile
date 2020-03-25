@@ -118,7 +118,7 @@ app.get("/recent-searches", (req, res) => {
     res.sendFile(`${__dirname}/recent.json`)
 })
 
-
+let name = ""
 
 // POST -> PDF generation and fetching of the data
 app.post('/create-employee-pdf', (req, res) => {
