@@ -40,7 +40,6 @@ app.post("/getCompanies", (req, res) => {
         }
         try {
             data = JSON.parse(jsonString)
-            console.log("Data:", data)
             if(req.body) {
                 res.send(Promise.resolve()) 
             }
@@ -83,6 +82,66 @@ app.post('/updateCompanies', (req, res) => {
         }
     })
     
+})
+
+app.post("/removeCompany", (req, res) => {
+    function containsObject(obj, list) {
+        var i;
+        for (i = 0; i < list.length; i++) {
+            if (list[i] === obj) {
+                return true;
+            }
+        }
+    
+        return false;
+    }
+    fs.readFile('./companies.json', 'utf8', (err, jsonString) => {
+        if (err) {
+            console.log("File read failed:", err)
+        } else {
+            let json = JSON.parse(jsonString)
+            let newArray = []
+            json.map((company) => {
+                if(company.id != req.body.body) {
+                    newArray.push(company)
+                }
+            })
+            fs.writeFile("./companies.json", JSON.stringify(newArray), (err) => {
+                if (err) console.log('Error writing file:', err)
+            })
+            res.send(Promise.resolve())
+        }
+    })
+})
+
+app.post('/remove-recent', (req, res) => {
+    function containsObject(obj, list) {
+        var i;
+        for (i = 0; i < list.length; i++) {
+            if (list[i] === obj) {
+                return true;
+            }
+        }
+    
+        return false;
+    }
+    fs.readFile('./recent.json', 'utf8', (err, jsonString) => {
+        if (err) {
+            console.log("File read failed:", err)
+        } else {
+            let json = JSON.parse(jsonString)
+            let newArray = []
+            json.map((company) => {
+                if(company.id != req.body.body) {
+                    newArray.push(company)
+                }
+            })
+            fs.writeFile("./recent.json", JSON.stringify(newArray), (err) => {
+                if (err) console.log('Error writing file:', err)
+            })
+            res.send(Promise.resolve())
+        }
+    })
 })
 
 app.post("/recent-searches", (req, res) => {
