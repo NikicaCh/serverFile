@@ -134,7 +134,7 @@ return `
             <p class="p">${statement2}</p>
                 <br />
                 <br />
-                Забелешка:
+                <p class="p">Забелешка:</p>
                 <br />
                 <br />
                 <br />
