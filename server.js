@@ -71,14 +71,19 @@ app.post('/updateCompanies', (req, res) => {
         if (err) {
             console.log("File read failed:", err)
         } else {
-            let json = JSON.parse(jsonString)
-            json=[...new Set(json),req.body.body]
-            if(!containsObject(req.body.body, jsonString)) {
+            fs.unlink(`./companies.json`, (err) => {
+                if(err) throw err
+                console.log("SUCCESFULLY DELETED FILE")
+                let json = JSON.parse(jsonString)
+                json=[...new Set(json),req.body.body]
+                if(!containsObject(req.body.body, jsonString)) {
                 fs.writeFile("./companies.json", JSON.stringify(json), (err) => {
                     if (err) console.log('Error writing file:', err)
                 })
                 res.send(Promise.resolve())
             } 
+            })
+            
         }
     })
     
