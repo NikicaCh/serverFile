@@ -92,11 +92,11 @@ return `
             </div>
             
             <div class="top right">
-                <p class="p">05.03.2020 </p>
+                <p class="p">${body.date}</p>
                 <p class="small">(датум на прегледот)</p>
                 <p class="p">-<p class="p">
                 <p class="small">(број на амбулантниот протокол)</p>
-                <p class="p">3655</p>
+                <p class="p">${body.id}</p>
                 <p class="small">(број на здравствен картон)</p>
             </div>
             
