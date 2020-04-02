@@ -25,7 +25,7 @@ return `
             .document {
                 width: auto;
                 height: auto;
-                padding: 6% 7% 6% 7%;
+                padding: 6% 10% 6% 10%;
             }
             .p {
                 font-size: 12px 
@@ -77,7 +77,7 @@ return `
                 text-align: center;
             }
             .small {
-                font-size: 6px;
+                font-size: 8px;
                 line-height: -2px;
             }
             

@@ -28,7 +28,7 @@ module.exports = ({ body }) => {
                 padding: 6% 10% 6% 10%;
             }
             .p {
-                font-size: 10px 
+                font-size: 12px 
             }
     
             .title {
@@ -77,7 +77,7 @@ module.exports = ({ body }) => {
                 text-align: center;
             }
             .small {
-                font-size: 6px;
+                font-size: 8px;
                 line-height: -2px;
             }
                 
