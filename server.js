@@ -201,7 +201,7 @@ app.post('/create-employee-pdf', (req, res) => {
         })
 })
 
-app.post('/create-company-pdf', (req, res) => {
+app.post('/company-pdf', (req, res) => {
     name = randomstring.generate(32)
     pdf.create(companyTemplate(req.body), {}).toFile(`${name}.pdf`, (err, response) => {
         if(err) res.send(Promise.reject())
