@@ -184,17 +184,13 @@ app.get("/recent-searches", (req, res) => {
     res.sendFile(`${__dirname}/recent.json`)
 })
 
-let name = ""
-let dest = ""
 
 // POST -> PDF generation and fetching of the data
 app.post('/create-employee-pdf', (req, res) => {
-        name = randomstring.generate(32)
-        pdf.create(employeeTemplate(req.body), {}).toFile(`${name}.pdf`, (err, response) => {
+        pdf.create(employeeTemplate(req.body), {}).toFile(`result.pdf`, (err, response) => {
             if(err) res.send(Promise.reject())
             else {
                if(response)  {
-                   dest = response.filename
                    res.send(Promise.resolve())
                }
             }
@@ -203,7 +199,7 @@ app.post('/create-employee-pdf', (req, res) => {
 
 app.post('/create-company-pdf', (req, res) => {
     name = randomstring.generate(32)
-    pdf.create(companyTemplate(req.body), {}).toFile(`${name}.pdf`, (err, response) => {
+    pdf.create(companyTemplate(req.body), {}).toFile(`result.pdf`, (err, response) => {
         if(err) res.send(Promise.reject())
         else {
             if(response) res.send(Promise.resolve())
@@ -213,7 +209,7 @@ app.post('/create-company-pdf', (req, res) => {
 
 // GET -> Send the generated pdf to the client
 app.get("/fetch-pdf", (req, res) => {
-    res.sendFile(`${dest}`)
+    res.sendFile(`result.pdf`)
 })
 
 app.post('')
