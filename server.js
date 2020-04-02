@@ -206,7 +206,10 @@ app.post('/company-pdf', (req, res) => {
     pdf.create(companyTemplate(req.body), {}).toFile(`${name}.pdf`, (err, response) => {
         if(err) res.send(Promise.reject())
         else {
-            if(response) res.send(Promise.resolve())
+            if(response) {
+                dest = response.filename
+                res.send(Promise.resolve())
+            }
         }
     })
 })
