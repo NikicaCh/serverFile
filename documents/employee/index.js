@@ -141,7 +141,7 @@ return `
             </p>
             <p class="centarl p">(МП)</p>
             <div class="b-left">
-                <p class="p">Куманово,  05.03.2020</p>
+                <p class="p">Куманово,  ${body.date}</p>
                 <p class="small">(место и датум)</p>
             </div>
             <div class="b-right">
