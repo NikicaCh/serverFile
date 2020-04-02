@@ -25,10 +25,10 @@ return `
             .document {
                 width: auto;
                 height: auto;
-                padding: 6% 10% 6% 10%;
+                padding: 6% 7% 6% 7%;
             }
             .p {
-                font-size: 10px 
+                font-size: 12px 
             }
     
             .title {
@@ -77,7 +77,7 @@ return `
                 text-align: center;
             }
             .small {
-                font-size: 4px;
+                font-size: 6px;
                 line-height: -2px;
             }
             

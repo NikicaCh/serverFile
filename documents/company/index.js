@@ -22,64 +22,64 @@ module.exports = ({ body }) => {
               <meta charset="utf-8">
               <title>PDF Result Template</title>
               <style>
-                .document {
-                    width: auto;
-                    height: auto;
-                    padding: 6% 10% 6% 10%;
-                }
-                .p {
-                    font-size: 10px 
-                }
-        
-                .title {
-                    font-size: 13px;
-                    text-align: center;
-                    font-widht: 100;
-                    padding: 15% 5% 2% 5%;
-                    margin-bottom: 2%;
-                }
-                .title2 {
-                    font-size: 13px;
-                    text-align: center;
-                    font-widht: 100;
-                    padding: 2% 5% 2% 5%;
-                    margin-bottom: 2%;
-                }
-                .centarl {
-                    text-align: center;
-                }
-                .top {
-                    position: absolute;
-                    top: 5%;
-                    font-size: 8px;
-                    line-height: 2px;
-                    text-align: center;
-                    margin-bottom: 10%;
-                }
-                .left {
-                    width: 60%;
-                    left: 5%;
-                }
-                .right {
-                    width: 30%;
-                    right: 5%;
-                }
-                .b-left {
-                    position: absolute;
-                    width: 30%;
-                    left: 10%;
-                    text-align: center;
-                }
-                .b-right {
-                    position: absolute;
-                    width: 40%;
-                    right: 0;
-                    text-align: center;
-                }
-                .small {
-                    font-size: 4px;
-                    line-height: -2px;
-                }
+              .document {
+                width: auto;
+                height: auto;
+                padding: 6% 10% 6% 10%;
+            }
+            .p {
+                font-size: 10px 
+            }
+    
+            .title {
+                font-size: 13px;
+                text-align: center;
+                font-widht: 100;
+                padding: 15% 5% 2% 5%;
+                margin-bottom: 2%;
+            }
+            .title2 {
+                font-size: 13px;
+                text-align: center;
+                font-widht: 100;
+                padding: 2% 5% 2% 5%;
+                margin-bottom: 2%;
+            }
+            .centarl {
+                text-align: center;
+            }
+            .top {
+                position: absolute;
+                top: 5%;
+                font-size: 8px;
+                line-height: 2px;
+                text-align: center;
+                margin-bottom: 10%;
+            }
+            .left {
+                width: 60%;
+                left: 5%;
+            }
+            .right {
+                width: 30%;
+                right: 5%;
+            }
+            .b-left {
+                position: absolute;
+                width: 30%;
+                left: 10%;
+                text-align: center;
+            }
+            .b-right {
+                position: absolute;
+                width: 40%;
+                right: 0;
+                text-align: center;
+            }
+            .small {
+                font-size: 6px;
+                line-height: -2px;
+            }
                 
               </style>
            </head>
