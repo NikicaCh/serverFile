@@ -3,7 +3,7 @@ module.exports = ({ body }) => {
     let statement2 = "Работникот <strong>Е СПОСОБЕН</strong> за занимањето кое го обавува."
     if(body.radio1 == 1 && body.radio2 == 1){
         statement1 = "Кај именуваниот <strong>НЕ ПОСТОИ</strong> патолошка состојба."
-        statement2 = "Работникот <strong>Е СПОСОБЕН</strong>v за занимањето кое го обавува."
+        statement2 = "Работникот <strong>Е СПОСОБЕН</strong> за занимањето кое го обавува."
     } else if(body.radio1 == 1 && body.radio2 == 2) {
         statement1 = "Кај именуваниот <strong>ПОСТОИ</strong> патолошка состојба која  НЕ ПРЕТСТАВУВА контраиндикација за работа, односно работни задачи."
         statement2 = "Работникот <strong>Е СПОСОБЕН</strong> за занимањето кое го обавува."
@@ -25,7 +25,7 @@ return `
             .document {
                 width: auto;
                 height: auto;
-                padding: 6% 10% 6% 10%;
+                padding: 6% 9% 6% 9%;
             }
             .p {
                 font-size: 10px 
@@ -36,7 +36,7 @@ return `
                 text-align: center;
                 font-widht: 100;
                 padding: 15% 5% 2% 5%;
-                margin-bottom: 2%;
+                margin-bottom: 3.5%;
             }
             .title2 {
                 font-size: 13px;
