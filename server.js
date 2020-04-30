@@ -184,13 +184,12 @@ app.get("/recent-searches", (req, res) => {
     res.sendFile(`${__dirname}/recent.json`)
 })
 
-let name = ""
 let dest = ""
 
 // POST -> PDF generation and fetching of the data
 app.post('/create-employee-pdf', (req, res) => {
         name = randomstring.generate(32)
-        pdf.create(employeeTemplate(req.body), {}).toFile(`${name}.pdf`, (err, response) => {
+        pdf.create(employeeTemplate(req.body), {}).toFile(`employee.pdf`, (err, response) => {
             if(err) res.send(Promise.reject())
             else {
                if(response)  {
@@ -203,7 +202,7 @@ app.post('/create-employee-pdf', (req, res) => {
 
 app.post('/company-pdf', (req, res) => {
     name = randomstring.generate(32)
-    pdf.create(companyTemplate(req.body), {}).toFile(`${name}.pdf`, (err, response) => {
+    pdf.create(companyTemplate(req.body), {}).toFile(`company.pdf`, (err, response) => {
         if(err) res.send(Promise.reject())
         else {
             if(response) {
@@ -217,6 +216,13 @@ app.post('/company-pdf', (req, res) => {
 // GET -> Send the generated pdf to the client
 app.get("/fetch-pdf", (req, res) => {
     res.sendFile(`${dest}`)
+})
+
+app.get("/getCompany", (req, res) => {
+    res.sendFile(`${dest}`) 
+})
+app.get("/getEmployee", (req, res) => {
+    res.sendFile(`${dest}`) 
 })
 
 app.post('')
