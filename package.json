@@ -9,7 +9,7 @@
     "express": "^4.17.1",
     "heroku": "^7.39.0",
     "heroku-cli": "^7.0.9",
-    "html-pdf": "^2.2.0",
+    "html-pdf": "^3.0.1",
     "node": "^13.10.1",
     "randomstring": "^1.1.5"
   },
